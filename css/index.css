@@ -3,10 +3,11 @@
 .slider .main,
 .slider .main .main-i{
    width: 100%;
-   height: 400px;
+   /* height: 400px; */
+   height: 600px;
    position: relative; 
    -webkit-transition: all .5s;
-
+    z-index: 2;
 }
 
 /* 幻灯片区域 */
@@ -22,17 +23,29 @@
    right:50%;
 }
 
+
+.slider .main .main-i.main-i_right{
+    right: -50%;
+}
+
+.slider .main .main-i#main_background,
 .slider .main .main-i.active{
     opacity: 1;
     right:0;
+    z-index:2;
+ }
 
+ .slider .main .main-i#main_background{
+     z-index: 1;
  }
 
 .slider .main .main-i img{
     width: 100%;
     position: absolute;
     left: 0;
-    top: 0;
+    top: 50%;
+    /* top: 0; */
+
    
 }
 
@@ -40,12 +53,14 @@
     position: absolute;
     right: 50%;
     top: 30%;
+    margin-right: 13%;
   
 }
 
 .slider .main .main-i .caption h1,
 .slider .main .main-i .caption h2{
-   -webkit-transition: all .8s 1s;
+    opacity: 0;
+   -webkit-transition: all 1s .5s;
 
 }
 
@@ -70,6 +85,7 @@
 
 .slider .main .main-i.active .caption h1,
 .slider .main .main-i.active .caption h2{
+    opacity: 1;
     margin-right: 0;
 }
 
@@ -98,6 +114,7 @@
     box-shadow: 0 1px 1px rgba(0, 0, 0,0.3);
 
     margin-right: 1px;
+    z-index: 2;
 }
 
 .slider .ctrl .ctrl-i img{

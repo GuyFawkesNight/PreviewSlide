@@ -13,31 +13,22 @@
 
 <body>
     <div class="slider">
-        <!-- 图片展示区域 -->
-        <div class="main">
-            <div class="main-i active">
-                <img src="img/{{index}}.jpg" alt="">
+        <!-- 图片展示区域 修改VIEW->Template(关键字替换)，增加template id-->
+        <div class="main" id="template_main">
+            <div class="main-i {{css}}" id="main_{{index}}">
+                <img class="picture" src="img/{{index}}.jpg" alt="">
                 <!-- 标题 -->
                 <div class="caption">
-                    <h1>h1 caption</h1>
-                    <h2>h2 caption</h2>
+                    <h1>{{h1}}</h1>
+                    <h2>{{h2}}</h2>
                 </div>
             </div>
-            <div class="main-i">
-                    <img src="img/{{index}}.jpg" alt="">
-                    <!-- 标题 -->
-                    <div class="caption">
-                        <h1>h1 caption</h1>
-                        <h2>h2 caption</h2>
-                    </div>
-                </div>
+
         </div>
 
         <!-- 控制按钮区域 -->
-        <div class="ctrl">
-            <a href="javascript:;" class="ctrl-i active">
-                <img src="img/{{index}}.jpg" alt="">
-            </a><a href="javascript:;" class="ctrl-i">
+        <div class="ctrl" id="template_ctrl">
+            <a href="javascript:switchSlider({{index}});" class="ctrl-i" id="ctrl_{{index}}">
                 <img src="img/{{index}}.jpg" alt="">
             </a>
         </div>
