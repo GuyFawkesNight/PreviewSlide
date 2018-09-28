@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Preview Slide</title>
+
+</head>
+
+<body>
+    <div class="slider">
+        <!-- 图片展示区域 -->
+        <div class="main">
+            <div class="main-i active">
+                <img src="img/{{index}}.jpg" alt="">
+                <!-- 标题 -->
+                <div class="caption">
+                    <h1>h1 caption</h1>
+                    <h2>h2 caption</h2>
+                </div>
+            </div>
+            <div class="main-i">
+                    <img src="img/{{index}}.jpg" alt="">
+                    <!-- 标题 -->
+                    <div class="caption">
+                        <h1>h1 caption</h1>
+                        <h2>h2 caption</h2>
+                    </div>
+                </div>
+        </div>
+
+        <!-- 控制按钮区域 -->
+        <div class="ctrl">
+            <a href="javascript:;" class="ctrl-i active">
+                <img src="img/{{index}}.jpg" alt="">
+            </a><a href="javascript:;" class="ctrl-i">
+                <img src="img/{{index}}.jpg" alt="">
+            </a>
+        </div>
+
+    </div>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
